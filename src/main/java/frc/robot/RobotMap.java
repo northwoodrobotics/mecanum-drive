@@ -15,10 +15,10 @@ package frc.robot;
  */
 public class RobotMap {
 	// DRIVETRAIN
-	public static final int drivetrainLF = 0;
-	public static final int drivetrainRF = 1;
+	public static final int drivetrainLF = 3;
+	public static final int drivetrainRF = 0;
 	public static final int drivetrainLB = 2;
-	public static final int drivetrainRB = 3;
+	public static final int drivetrainRB = 1;
 	public static final boolean lfInverted = false;
 	public static final boolean rfInverted = true;
 	public static final boolean lbInverted = false;

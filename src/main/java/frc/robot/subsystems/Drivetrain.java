@@ -8,13 +8,13 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.SpeedController;
-import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.commands.TeleDrive;
 import frc.robot.RobotMap;
+import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
 /**
- * A mecanum drivetrain with VictorSP motor controllers.
+ * A mecanum drivetrain with WPI_VictorSPX motor controllers.
  */
 public class Drivetrain extends Subsystem {
 	private SpeedController leftFront;
@@ -23,10 +23,10 @@ public class Drivetrain extends Subsystem {
 	private SpeedController rightBack;
 
 	public void init() {
-		leftFront = new VictorSP(RobotMap.drivetrainLF);
-		rightFront = new VictorSP(RobotMap.drivetrainRF);
-		leftBack = new VictorSP(RobotMap.drivetrainLB);
-		rightBack = new VictorSP(RobotMap.drivetrainRB);
+		leftFront = new WPI_VictorSPX(RobotMap.drivetrainLF);
+		rightFront = new WPI_VictorSPX(RobotMap.drivetrainRF);
+		leftBack = new WPI_VictorSPX(RobotMap.drivetrainLB);
+		rightBack = new WPI_VictorSPX(RobotMap.drivetrainRB);
 
 		leftFront.setInverted(RobotMap.lfInverted);
 		rightFront.setInverted(RobotMap.rfInverted);
