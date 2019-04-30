@@ -7,7 +7,6 @@
 
 package frc.robot.subsystems;
 
-import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.commands.TeleDrive;
 import frc.robot.RobotMap;
@@ -17,10 +16,10 @@ import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
  * A mecanum drivetrain with WPI_VictorSPX motor controllers.
  */
 public class Drivetrain extends Subsystem {
-	private SpeedController leftFront;
-	private SpeedController rightFront;
-	private SpeedController leftBack;
-	private SpeedController rightBack;
+	private WPI_VictorSPX leftFront;
+	private WPI_VictorSPX rightFront;
+	private WPI_VictorSPX leftBack;
+	private WPI_VictorSPX rightBack;
 
 	public void init() {
 		leftFront = new WPI_VictorSPX(RobotMap.drivetrainLF);
