@@ -46,7 +46,10 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void robotPeriodic() {
-		SmartDashboard.putNumber("deadzone of driver left x", OI.deadzoneof(OI.driveController.getX(Hand.kLeft)));
+		SmartDashboard.putNumber("deadzone of driver left x ", OI.deadzoneof(OI.driveController.getX(Hand.kLeft)));
+		SmartDashboard.putNumber("deadzone of driver left y ", OI.deadzoneof(-OI.driveController.getY(Hand.kLeft)));
+		SmartDashboard.putNumber("deadzone of driver right x ", OI.deadzoneof(OI.driveController.getX(Hand.kRight)));
+
 	}
 
 	/**

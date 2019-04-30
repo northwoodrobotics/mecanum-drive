@@ -31,9 +31,9 @@ public class TeleDrive extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		drivetrain.drive(OI.deadzoneof(-OI.driveController.getY(Hand.kLeft)),
-				OI.deadzoneof(OI.driveController.getX(Hand.kLeft)),
-				OI.deadzoneof(OI.driveController.getX(Hand.kRight)));
+		drivetrain.drive(OI.deadzoneof(-OI.driveController.getY(Hand.kLeft)) * 0.8,
+				OI.deadzoneof(OI.driveController.getX(Hand.kLeft)) * 0.8,
+				OI.deadzoneof(OI.driveController.getX(Hand.kRight)) * 0.8);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
