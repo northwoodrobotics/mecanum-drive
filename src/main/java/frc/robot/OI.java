@@ -23,6 +23,18 @@ public class OI {
 	public static final JoystickButton driveLTrigger = new JoystickButton(driveController, 5);
 	public static final JoystickButton driveRTrigger = new JoystickButton(driveController, 6);
 
+	public static double deadband(double input) {
+		double radius = 0.1;
+		double output = 0;
+		if (input > radius) {
+			output = ((1 / 1 - radius) * (input - 1)) + 1;
+		} else if (input < -radius) {
+			output = ((1 / 1 - radius) * (input + 1)) - 1;
+		}
+
+		return output;
+	}
+
 	public OI() {
 		// Add stuff in here to make the JoystickButtons trigger commands:
 
