@@ -19,8 +19,8 @@ public class RobotMap {
 	public static final int drivetrainRF = 0;
 	public static final int drivetrainLB = 2;
 	public static final int drivetrainRB = 1;
-	public static final boolean lfInverted = false;
-	public static final boolean rfInverted = true;
-	public static final boolean lbInverted = false;
-	public static final boolean rbInverted = true;
+	public static final boolean lfInverted = true;
+	public static final boolean rfInverted = false;
+	public static final boolean lbInverted = true;
+	public static final boolean rbInverted = false;
 }

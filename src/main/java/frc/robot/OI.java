@@ -36,6 +36,7 @@ public class OI {
 	}
 
 	public OI() {
+
 		// Add stuff in here to make the JoystickButtons trigger commands:
 
 		// driveA.whenPressed(new ExampleCommand());
@@ -45,4 +46,16 @@ public class OI {
 		// Of course, you should replace ExampleCommand with the name of the command you
 		// want to trigger.
 	}
+
+	public static double deadzoneof(double input) {
+		double deadzonewidth = 0.2;
+		double result = 0;
+		if (input <= -deadzonewidth) {
+			result = ((1 / (1 - deadzonewidth)) * (input + 1)) - 1;
+		} else if (input >= deadzonewidth) {
+			result = ((1 / (1 - deadzonewidth)) * (input - 1)) + 1;
+		}
+		return result;
+	}
+
 }
